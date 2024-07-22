@@ -1,8 +1,9 @@
+import Header from "./components/Layout/Header";
 function App() {
   return (
-    <div>
-      <h2>Стартовый Проект</h2>
-    </div>
+    <React.Fragment>
+      <Header/>
+    </React.Fragment>
   );
 }
 
