@@ -1,4 +1,5 @@
 import "./Header.css";
+import React from "react";
 import sushi from "../../assets/M1.Boominfo.ORG - 003 sushi.jpg"
 import styles from "./Header.css"
 const Header = (props) => {
