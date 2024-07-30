@@ -2,6 +2,7 @@ import Header from "./components/Layout/Header";
 import React, {useState} from "react";
 import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
+import CartContextProvider from "./store/CartContextProvider";
 function App() {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const cartVisibilityHandler = () => {
@@ -11,13 +12,13 @@ function App() {
     setIsCartVisible(false);
   }
   return (
-    <React.Fragment>
+    <CartContextProvider>
      { isCartVisible && < Cart onHideCart = {hideCartHandler}/>} 
       <Header onSowCart = {cartVisibilityHandler}/>
       <main>
         <Meals />
       </main>
-    </React.Fragment>
+    </CartContextProvider>
   );
 }
 
