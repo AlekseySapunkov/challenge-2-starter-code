@@ -1,7 +1,9 @@
 import Modal from "../UI/Modal"
 import styles from "./Cart.module.css"
+import { useContext } from "react"
+import CartContext from "../../store/cart-context"
 const Cart = (props) => {
-    
+    const cartContext = useContext(CartContext)
     const cartItems = (
         <ul className={styles['cart-items']}>
             {[{id: 'm1', name: "something", amount: 2, price: 39}].map((item)=>{
