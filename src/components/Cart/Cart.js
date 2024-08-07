@@ -6,7 +6,7 @@ const Cart = (props) => {
     const cartContext = useContext(CartContext)
     const cartItems = (
         <ul className={styles['cart-items']}>
-            {[{id: 'm1', name: "something", amount: 2, price: 39}].map((item)=>{
+            {cartContext.items.map((item)=>{
                 return <li>{item.name}</li>
             })}
         </ul>
